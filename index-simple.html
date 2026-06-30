@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behredin Eshetu | Software Engineer & AI Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      return (
+        <main>
+          <header className="site-header">
+            <a className="brand" href="#top">
+              <span>BE</span>
+              <strong>Behredin Eshetu</strong>
+            </a>
+            <nav>
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#services">Services</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </header>
+
+          <section id="top" className="hero section">
+            <div className="hero-grid">
+              <div className="hero-copy">
+                <p className="eyebrow">Software Engineer & AI Developer</p>
+                <h1>Building Modern Software Solutions for Businesses</h1>
+                <p className="hero-subtitle">
+                  I develop high-quality websites, AI-powered applications, Telegram automation systems, and custom software solutions.
+                </p>
+                <div className="hero-actions">
+                  <a className="btn primary" href="#projects">View Projects</a>
+                  <a className="btn secondary" href="#contact">Hire Me</a>
+                  <a className="btn ghost" href="https://github.com/BehredinEshetu" target="_blank">GitHub</a>
+                </div>
+              </div>
+              <div className="hero-visual glass">
+                <div className="visual-topline">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" className="section">
+            <div className="section-intro">
+              <p className="eyebrow">About</p>
+              <h2>Engineering that turns business needs into reliable digital systems</h2>
+            </div>
+            <div className="about-grid">
+              <article className="capability glass">
+                <h3>Web Development</h3>
+                <p>Strategy, implementation, deployment, and support shaped around real business workflows.</p>
+              </article>
+              <article className="capability glass">
+                <h3>AI Integration</h3>
+                <p>Strategy, implementation, deployment, and support shaped around real business workflows.</p>
+              </article>
+              <article className="capability glass">
+                <h3>Business Automation</h3>
+                <p>Strategy, implementation, deployment, and support shaped around real business workflows.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="projects" className="section">
+            <div className="section-intro">
+              <p className="eyebrow">Projects</p>
+              <h2>Featured Work</h2>
+            </div>
+            <div className="project-stack">
+              <article className="project-card glass">
+                <h3>Tea Station Website</h3>
+                <p>Retail hospitality - React, Tailwind CSS, SEO</p>
+                <p>Create a polished online presence that presents tea products, brand trust, and customer pathways clearly.</p>
+              </article>
+              <article className="project-card glass">
+                <h3>Hotel Website</h3>
+                <p>Booking & Hospitality - Next.js, React, REST APIs</p>
+                <p>Help guests understand rooms, amenities, location, and booking options without friction.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="services" className="section">
+            <div className="section-intro">
+              <p className="eyebrow">Services</p>
+              <h2>What I Build</h2>
+            </div>
+            <div className="services-grid">
+              <article className="service-card glass">
+                <h3>Website Development</h3>
+                <p>Premium, fast, conversion-focused websites for businesses that need to look established and win trust.</p>
+              </article>
+              <article className="service-card glass">
+                <h3>AI Integration</h3>
+                <p>LLM assistants, knowledge-base systems, workflow copilots, and practical AI features.</p>
+              </article>
+              <article className="service-card glass">
+                <h3>Business Automation</h3>
+                <p>Systems that reduce repetitive work, connect tools, generate reports, and make teams faster.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="contact" className="section">
+            <div className="section-intro">
+              <p className="eyebrow">Contact</p>
+              <h2>Ready to build something great?</h2>
+            </div>
+            <div className="contact-methods glass">
+              <a href="mailto:hello@behredin.dev" className="contact-link">
+                <strong>Email</strong>
+                <p>hello@behredin.dev</p>
+              </a>
+              <a href="https://t.me/behredin" target="_blank" className="contact-link">
+                <strong>Telegram</strong>
+                <p>Send me a message</p>
+              </a>
+              <a href="https://github.com/BehredinEshetu" target="_blank" className="contact-link">
+                <strong>GitHub</strong>
+                <p>Check out my work</p>
+              </a>
+            </div>
+          </section>
+        </main>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+    </script>
+</body>
+</html>
