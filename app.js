@@ -1,3 +1,5 @@
+const html = window.html;
+
 const highlights = [
   { label: "Years shipping", value: "3+" },
   { label: "Projects delivered", value: "20+" },
@@ -50,7 +52,7 @@ const contactLinks = [
 ];
 
 function App() {
-  return (
+  return html`
     <main>
       <header className="site-header">
         <a className="brand" href="#top">
@@ -74,20 +76,12 @@ function App() {
               I design and build high-end websites, AI-powered experiences, and practical automation systems for hotels, brands, and learning products.
             </p>
             <div className="hero-actions">
-              <a className="btn primary" href="#projects">
-                View Projects
-              </a>
-              <a className="btn secondary" href="#contact">
-                Hire Me
-              </a>
-              <a className="btn ghost" href="https://github.com/BehredinEshetu" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              <a className="btn primary" href="#projects">View Projects</a>
+              <a className="btn secondary" href="#contact">Hire Me</a>
+              <a className="btn ghost" href="https://github.com/BehredinEshetu" target="_blank" rel="noreferrer">GitHub</a>
             </div>
             <div className="trust-strip">
-              {focusAreas.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
+              ${focusAreas.map((item) => html`<span key=${item}>${item}</span>`)}
             </div>
           </div>
           <div className="hero-visual glass">
@@ -97,12 +91,12 @@ function App() {
               <span></span>
             </div>
             <div className="metric-row">
-              {highlights.map((item) => (
-                <div className="metric" key={item.label}>
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
+              ${highlights.map((item) => html`
+                <div className="metric" key=${item.label}>
+                  <span>${item.label}</span>
+                  <strong>${item.value}</strong>
                 </div>
-              ))}
+              `)}
             </div>
             <div className="dashboard-grid">
               <div className="dashboard-panel tall">
@@ -137,9 +131,7 @@ function App() {
           </p>
         </div>
         <div className="project-stack">
-          {window.portfolioProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
+          ${window.portfolioProjects.map((project, index) => html`<${ProjectCard} key=${project.id} project=${project} index=${index} />`)}
         </div>
       </section>
 
@@ -149,13 +141,13 @@ function App() {
           <h2>Engineering that turns business goals into clear, reliable digital systems.</h2>
         </div>
         <div className="about-grid">
-          {capabilities.map((item) => (
-            <article className="capability glass" key={item.title}>
+          ${capabilities.map((item) => html`
+            <article className="capability glass" key=${item.title}>
               <span className="capability-icon" aria-hidden="true"></span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+              <h3>${item.title}</h3>
+              <p>${item.text}</p>
             </article>
-          ))}
+          `)}
         </div>
       </section>
 
@@ -165,12 +157,12 @@ function App() {
           <h2>What I build for clients who need a site or system that feels finished.</h2>
         </div>
         <div className="service-grid">
-          {services.map((item) => (
-            <article className="service-card glass" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+          ${services.map((item) => html`
+            <article className="service-card glass" key=${item.title}>
+              <h3>${item.title}</h3>
+              <p>${item.text}</p>
             </article>
-          ))}
+          `)}
         </div>
       </section>
 
@@ -180,12 +172,12 @@ function App() {
           <h2>A simple delivery process that keeps the work focused and predictable.</h2>
         </div>
         <div className="timeline glass">
-          {processSteps.map((step, index) => (
-            <div className="timeline-item" key={step}>
-              <span>0{index + 1}</span>
-              <strong>{step}</strong>
+          ${processSteps.map((step, index) => html`
+            <div className="timeline-item" key=${step}>
+              <span>0${index + 1}</span>
+              <strong>${step}</strong>
             </div>
-          ))}
+          `)}
         </div>
       </section>
 
@@ -201,12 +193,12 @@ function App() {
                 If you need a portfolio site, business website, AI feature, or automation workflow, send the goal and I will help shape the best version of it.
               </p>
               <div className="contact-links">
-                {contactLinks.map((item) => (
-                  <a href={item.href} key={item.label} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-                    <strong>{item.label}</strong>
-                    <span>{item.value}</span>
+                ${contactLinks.map((item) => html`
+                  <a href=${item.href} key=${item.label} target=${item.href.startsWith("http") ? "_blank" : undefined} rel=${item.href.startsWith("http") ? "noreferrer" : undefined}>
+                    <strong>${item.label}</strong>
+                    <span>${item.value}</span>
                   </a>
-                ))}
+                `)}
               </div>
             </div>
             <form className="contact-form" action="mailto:hello@behredin.dev" method="post" encType="text/plain">
@@ -222,16 +214,14 @@ function App() {
                 Project brief
                 <textarea name="message" rows="5" placeholder="Tell me what you want to build"></textarea>
               </label>
-              <button className="btn primary" type="submit">
-                Start a conversation
-              </button>
+              <button className="btn primary" type="submit">Start a conversation</button>
             </form>
           </div>
         </div>
       </section>
     </main>
-  );
+  `;
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(React.createElement(App));

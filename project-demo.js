@@ -1,8 +1,10 @@
+const html = window.html;
+
 function ProjectDemo() {
   const projectId = new URLSearchParams(window.location.search).get("project") || "luxury-hotel";
   const project = window.portfolioProjects.find((item) => item.id === projectId) || window.portfolioProjects[0];
 
-  return (
+  return html`
     <main>
       <header className="site-header">
         <a className="brand" href="index.html#projects">
@@ -19,19 +21,15 @@ function ProjectDemo() {
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Live Demo</p>
-            <h1>{project.title}</h1>
-            <p className="hero-subtitle">{project.description}</p>
+            <h1>${project.title}</h1>
+            <p className="hero-subtitle">${project.description}</p>
             <div className="hero-actions">
-              <a className="btn primary" href="index.html#projects">
-                Back to Projects
-              </a>
-              <a className="btn secondary" href={project.liveDemoUrl}>
-                Open Demo Route
-              </a>
+              <a className="btn primary" href="index.html#projects">Back to Projects</a>
+              <a className="btn secondary" href=${project.liveDemoUrl}>Open Demo Route</a>
             </div>
           </div>
           <div className="project-preview demo-preview">
-            <img src={project.image} alt={project.imageAlt} />
+            <img src=${project.image} alt=${project.imageAlt} />
           </div>
         </div>
       </section>
@@ -45,24 +43,20 @@ function ProjectDemo() {
           <article className="service-card glass">
             <h3>Technologies</h3>
             <div className="badge-list">
-              {project.technologies.map((technology) => (
-                <span key={technology}>{technology}</span>
-              ))}
+              ${project.technologies.map((technology) => html`<span key=${technology}>${technology}</span>`)}
             </div>
           </article>
           <article className="service-card glass">
             <h3>Key Features</h3>
             <ul className="feature-list">
-              {project.features.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
+              ${project.features.map((feature) => html`<li key=${feature}>${feature}</li>`)}
             </ul>
           </article>
         </div>
       </section>
     </main>
-  );
+  `;
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<ProjectDemo />);
+root.render(React.createElement(ProjectDemo));
