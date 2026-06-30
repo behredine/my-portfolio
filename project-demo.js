@@ -1,10 +1,20 @@
-const html = window.html;
+const demoHtml = window.html;
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  rootElement.innerHTML = `
+    <main style="padding: 24px; max-width: 760px; margin: 0 auto; font-family: Segoe UI, sans-serif;">
+      <h1 style="margin: 0 0 8px; font-size: 1.6rem;">Loading project demo...</h1>
+      <p style="margin: 0 0 12px; color: #444;">If this stays visible, a runtime error stopped the demo from mounting.</p>
+    </main>
+  `;
+}
 
 function ProjectDemo() {
   const projectId = new URLSearchParams(window.location.search).get("project") || "luxury-hotel";
   const project = window.portfolioProjects.find((item) => item.id === projectId) || window.portfolioProjects[0];
 
-  return html`
+  return demoHtml`
     <main>
       <header className="site-header">
         <a className="brand" href="index.html#projects">
@@ -43,13 +53,13 @@ function ProjectDemo() {
           <article className="service-card glass">
             <h3>Technologies</h3>
             <div className="badge-list">
-              ${project.technologies.map((technology) => html`<span key=${technology}>${technology}</span>`)}
+                  ${project.technologies.map((technology) => demoHtml`<span key=${technology}>${technology}</span>`)}
             </div>
           </article>
           <article className="service-card glass">
             <h3>Key Features</h3>
             <ul className="feature-list">
-              ${project.features.map((feature) => html`<li key=${feature}>${feature}</li>`)}
+                  ${project.features.map((feature) => demoHtml`<li key=${feature}>${feature}</li>`)}
             </ul>
           </article>
         </div>
@@ -58,5 +68,9 @@ function ProjectDemo() {
   `;
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(rootElement);
 root.render(React.createElement(ProjectDemo));
+
+if (rootElement) {
+  rootElement.setAttribute("data-mounted", "true");
+}

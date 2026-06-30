@@ -1,4 +1,14 @@
-const html = window.html;
+const appHtml = window.html;
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  rootElement.innerHTML = `
+    <main style="padding: 24px; max-width: 760px; margin: 0 auto; font-family: Segoe UI, sans-serif;">
+      <h1 style="margin: 0 0 8px; font-size: 1.6rem;">Loading portfolio...</h1>
+      <p style="margin: 0 0 12px; color: #444;">If this stays visible, a runtime error stopped the app from mounting.</p>
+    </main>
+  `;
+}
 
 const highlights = [
   { label: "Years shipping", value: "3+" },
@@ -52,7 +62,7 @@ const contactLinks = [
 ];
 
 function App() {
-  return html`
+  return appHtml`
     <main>
       <header className="site-header">
         <a className="brand" href="#top">
@@ -81,7 +91,7 @@ function App() {
               <a className="btn ghost" href="https://github.com/BehredinEshetu" target="_blank" rel="noreferrer">GitHub</a>
             </div>
             <div className="trust-strip">
-              ${focusAreas.map((item) => html`<span key=${item}>${item}</span>`)}
+                  ${focusAreas.map((item) => appHtml`<span key=${item}>${item}</span>`)}
             </div>
           </div>
           <div className="hero-visual glass">
@@ -91,7 +101,7 @@ function App() {
               <span></span>
             </div>
             <div className="metric-row">
-              ${highlights.map((item) => html`
+                  ${highlights.map((item) => appHtml`
                 <div className="metric" key=${item.label}>
                   <span>${item.label}</span>
                   <strong>${item.value}</strong>
@@ -131,7 +141,7 @@ function App() {
           </p>
         </div>
         <div className="project-stack">
-          ${window.portfolioProjects.map((project, index) => html`<${ProjectCard} key=${project.id} project=${project} index=${index} />`)}
+              ${window.portfolioProjects.map((project, index) => appHtml`<${ProjectCard} key=${project.id} project=${project} index=${index} />`)}
         </div>
       </section>
 
@@ -223,5 +233,9 @@ function App() {
   `;
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(rootElement);
 root.render(React.createElement(App));
+
+if (rootElement) {
+  rootElement.setAttribute("data-mounted", "true");
+}
