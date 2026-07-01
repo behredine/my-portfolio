@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Luxury hotel website preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071018"/>
+      <stop offset="0.55" stop-color="#10203a"/>
+      <stop offset="1" stop-color="#070a12"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#52e6ff"/>
+      <stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="320" cy="160" r="260" fill="#52e6ff" opacity="0.12"/>
+  <circle cx="1320" cy="160" r="280" fill="#ff76bd" opacity="0.12"/>
+  <rect x="110" y="110" width="1380" height="780" rx="42" fill="#ffffff" opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+  <rect x="160" y="170" width="1280" height="620" rx="34" fill="#0d1628" stroke="#ffffff" stroke-opacity="0.14"/>
+  <rect x="160" y="170" width="1280" height="86" rx="34" fill="#ffffff" opacity="0.05"/>
+  <circle cx="214" cy="214" r="10" fill="#62f5b4"/>
+  <circle cx="246" cy="214" r="10" fill="#ffd166"/>
+  <circle cx="278" cy="214" r="10" fill="#ff76bd"/>
+  <text x="210" y="370" fill="#62f5b4" font-family="Arial, sans-serif" font-size="30" font-weight="700">Luxury Hotel Website</text>
+  <text x="210" y="475" fill="#f7fbff" font-family="Arial, sans-serif" font-size="68" font-weight="900">Premium stays</text>
+  <text x="210" y="545" fill="#dce7f5" font-family="Arial, sans-serif" font-size="38" font-weight="700">AI guest assistant, reservations, and room showcase</text>
+  <rect x="210" y="620" width="250" height="72" rx="36" fill="url(#accent)"/>
+  <text x="264" y="667" fill="#071018" font-family="Arial, sans-serif" font-size="25" font-weight="900">Book now</text>
+  <rect x="1030" y="320" width="240" height="300" rx="28" fill="#ffffff" opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <rect x="840" y="290" width="320" height="340" rx="32" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.14"/>
+  <rect x="870" y="330" width="260" height="22" rx="11" fill="#52e6ff" opacity="0.65"/>
+  <rect x="870" y="370" width="210" height="18" rx="9" fill="#ffffff" opacity="0.42"/>
+  <rect x="870" y="406" width="180" height="18" rx="9" fill="#ffffff" opacity="0.32"/>
+  <rect x="870" y="470" width="240" height="110" rx="24" fill="#0d1628" stroke="#ffffff" stroke-opacity="0.12"/>
+</svg>

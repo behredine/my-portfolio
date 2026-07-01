@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Behredin Eshetu portfolio preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070a12"/>
+      <stop offset="0.55" stop-color="#0b1222"/>
+      <stop offset="1" stop-color="#071018"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#52e6ff"/>
+      <stop offset="1" stop-color="#62f5b4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="210" cy="120" r="230" fill="#52e6ff" opacity="0.15"/>
+  <circle cx="1010" cy="90" r="260" fill="#ff76bd" opacity="0.13"/>
+  <rect x="80" y="80" width="1040" height="470" rx="34" fill="#ffffff" opacity="0.07" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="120" y="170" fill="#62f5b4" font-family="Arial, sans-serif" font-size="28" font-weight="700">Software Engineer &amp; AI Developer</text>
+  <text x="120" y="270" fill="#f7fbff" font-family="Arial, sans-serif" font-size="68" font-weight="900">Behredin Eshetu</text>
+  <text x="120" y="355" fill="#dce7f5" font-family="Arial, sans-serif" font-size="42" font-weight="700">Modern Software Solutions</text>
+  <rect x="120" y="420" width="270" height="64" rx="32" fill="url(#accent)"/>
+  <text x="162" y="462" fill="#071018" font-family="Arial, sans-serif" font-size="24" font-weight="900">Hire for projects</text>
+</svg>
