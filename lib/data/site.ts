@@ -6,9 +6,9 @@ export const siteConfig: SiteConfig = {
   description:
     "Freelance software engineer building premium websites, AI integrations, and business automation for companies that need reliable, production-ready software.",
   url: "https://behredin.dev",
-  email: "hello@behredin.dev",
-  github: "https://github.com/BehredinEshetu",
-  telegram: "https://t.me/behredin",
+  email: "behredineshetu27@gmail.com",
+  github: "https://github.com/behredine",
+  telegram: "https://t.me/beetheart",
   role: "Software Engineer",
   tagline: "I build high-quality software for real businesses.",
 };
@@ -96,13 +96,13 @@ export const processSteps = [
 export const contactLinks = [
   {
     label: "Email",
-    value: "hello@behredin.dev",
-    href: "mailto:hello@behredin.dev",
+    value: "behredineshetu27@gmail.com",
+    href: "mailto:behredineshetu27@gmail.com",
   },
   {
     label: "Telegram",
-    value: "@behredin",
-    href: "https://t.me/behredin",
+    value: "@beetheart",
+    href: "https://t.me/beetheart",
   },
   {
     label: "GitHub",
