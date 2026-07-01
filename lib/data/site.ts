@@ -106,8 +106,8 @@ export const contactLinks = [
   },
   {
     label: "GitHub",
-    value: "BehredinEshetu",
-    href: "https://github.com/BehredinEshetu",
+    value: "behredine",
+    href: "https://github.com/behredine",
   },
 ];
 
