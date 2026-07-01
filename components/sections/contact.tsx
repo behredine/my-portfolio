@@ -67,7 +67,7 @@ export function Contact() {
 
               <form
                 className="space-y-5 p-8 lg:p-10"
-                action={`mailto:${siteConfig.email}`}
+                action="https://formspree.io/f/mykqnbzg"
                 method="post"
                 encType="text/plain"
               >
